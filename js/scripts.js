@@ -3,10 +3,10 @@ $(document).ready(function(){
   var Animal = function() {
   };
   Animal.prototype.walk = function() {
-    console.log("I am walking.");
+    return "I am walking.";
   };
   Animal.prototype.eat = function() {
-    console.log("I am eating.");
+    return "I am eating.";
   };
 
   function Cat(){
@@ -14,17 +14,17 @@ $(document).ready(function(){
   Cat.prototype = Object.create(Animal.prototype);
   Cat.prototype.constructor = Cat;
   Cat.prototype.purr = function(){
-    console.log("Purrrrr...");
+    return "Purrrrr...";
   };
   Cat.prototype.meow = function(){
-    console.log("Meow meow...");
+    return "Meow meow...";
   };
 
   var cat1 = new Cat();
-  cat1.walk();
-  cat1.eat();
-  cat1.purr();
-  cat1.meow();
+  console.log(cat1.walk());
+  console.log(cat1.eat());
+  console.log(cat1.purr());
+  console.log(cat1.meow());
 
   //Second assignment. SalaryCalculator module
   var SalaryCalculator = (function() {
